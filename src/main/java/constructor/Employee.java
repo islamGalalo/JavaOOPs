@@ -7,19 +7,34 @@ public class Employee {
     double salary ;
     double bonus ;
     boolean resident ;
-    public Employee (){
+// overloading same constructor or method name but different parameter
+    public Employee ( int id,  String n) {
+     emp_ID = id ;
+     name = n ;
 
     }
-    public Employee (int emp_ID , String name) {
-
+    public Employee (int id , String n , boolean r){
+      resident = r ;
+      this.name = n ;
+      this.emp_ID = id ;
     }
-    public Employee (int emp_ID , String name , boolean resident){
-
+    public Employee (int id , String  n , String d , double s ,boolean r){
+        this.name = n ;
+        this.emp_ID = id ;
+        this.resident = r ;
+        depart = d ;
+        salary =s ;
     }
-    public Employee (int emp_ID , String name , String depart, double salary,double bonus , boolean resident ){
+     public void print_empdata (){
 
-    }
 
+         System.out.println(salary);
+         System.out.println(bonus);
+         System.out.println(name);
+         System.out.println(emp_ID);
+         System.out.println(depart);
+         System.out.println(resident);
+     }
     public int getEmp_ID() {
         return emp_ID;
     }
